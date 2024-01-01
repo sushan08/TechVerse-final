@@ -14,7 +14,7 @@ export default function Setting() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const PF = "http://localhost:8000/images/"
+  const PF = "https://api.techverse.revampgoal.co/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

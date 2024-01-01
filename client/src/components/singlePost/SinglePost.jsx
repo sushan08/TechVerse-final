@@ -21,7 +21,7 @@ const SinglePost = () => {
 
   const getComments = useCallback(async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/comments/${path}/comments`);
+      const res = await axios.get(`/comments/${path}/comments`);
       console.log("Comments:", res.data);
       setComments(res.data);
     } catch (err) {
@@ -32,7 +32,7 @@ const SinglePost = () => {
 
     const getPost = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/posts/${path}`);
+        const res = await axios.get(`/posts/${path}`);
         setPost(res.data);
         setTitle(res.data.title);
         setDesc(res.data.desc);

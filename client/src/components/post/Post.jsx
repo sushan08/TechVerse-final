@@ -8,14 +8,14 @@ import axios from 'axios';
 
 
 export default function Post({ post }) {
-  const PF = "http://localhost:8000/images/";
+  const PF = "https://api.techverse.revampgoal.co/images/";
   const [liked, setLiked] = useState(post.likes);
   const [viewCount, setViewCount] = useState(post.views);
 
   const handleLike = async () => {
     try {
       // Send a request to the server to update the like status
-      const response = await fetch(`http://localhost:8000/api/posts/${post._id}/like`, {
+      const response = await fetch(`/posts/${post._id}/like`, {
         method: 'PUT',
       });
   
