@@ -1,0 +1,52 @@
+
+form {
+    max-width: 500px; 
+    margin: auto;
+    margin-top: 60px;
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 10px; 
+}
+
+/* Style for each label */
+label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Space between label and input */
+    font-size: 1.20rem; /* Font size for labels */
+    color: #161515; /* Font color for labels */
+}
+
+/* Style for input fields and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding inside input fields */
+    margin-bottom: 20px; /* Space between each field */
+    border: 1px solid #ddd9d9; /* Border color */
+    border-radius: 4px; /* Slightly rounded borders for inputs */
+}
+
+/* Style for the textarea */
+textarea {
+    height: 150px; 
+    resize: vertical; 
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    width: 100%;
+    font-family: cursive;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff; /* Text color */
+    background-color: #424446; /* Background color */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    font-size: 1rem;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #33d42d; /* Darker shade for hover state */
+}

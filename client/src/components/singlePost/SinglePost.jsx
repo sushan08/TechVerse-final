@@ -128,16 +128,16 @@ const SinglePost = () => {
         {/* Display comments */}
 
         {/* Comment input */}
-        {user && <Comment postId={post._id} updateComments={getComments} />}
+        {user && <Comment postId={post._id} updateComments={getComments} />} 
       </div>
-        <div className="comments">
-          <h3>Comments</h3>
-          {comments.map((comment) => (
-            <div key={comment._id} className="comment">
-              <strong>{comment.username}</strong> {comment.text}
-            </div>
-          ))}
-        </div>
+      {/* <div className="comments">
+        <h3>Comments</h3>
+        {comments.map((comment) => (
+          <div key={comment._id} className="comment">
+            <strong>{comment.username}</strong> {comment.text}
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 }

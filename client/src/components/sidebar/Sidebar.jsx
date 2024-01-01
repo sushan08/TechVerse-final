@@ -31,10 +31,10 @@ export default function Sidebar() {
           <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fab fa-facebook-square"></i>
-          <i className="sidebarIcon fab fa-instagram-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
-          <i className="sidebarIcon fab fa-twitter-square"></i>
+          <a href='www.facebook.com'><i className="sidebarIcon fab fa-facebook-square" ></i></a>
+          <a href='www.instagram.com'><i className="sidebarIcon fab fa-instagram-square"></i></a>
+          <a href='www.pininterest.com'><i className="sidebarIcon fab fa-pinterest-square"></i></a>
+          <a href='www.twitter.com'><i className="sidebarIcon fab fa-twitter-square"></i></a>
         </div>
       </div>       
         
