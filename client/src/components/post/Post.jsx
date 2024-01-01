@@ -35,7 +35,7 @@ export default function Post({ post }) {
     // Use setTimeout to delay the view count update
     setTimeout(() => {
       // Add logic to update view count, e.g., send a request to your server
-      axios.put(`/posts/${post._id}/view`)
+      axios.put(`https://api.techverse.revampgoal.co/api/posts/${post._id}/view`)
         .then((response) => {
           setViewCount(response.data.views);
         })
@@ -56,7 +56,7 @@ export default function Post({ post }) {
         />
       )}
       <div className="postInfo">
-        {/* <div className="postCats">
+        <div className="postCats">
           {Array.isArray(post.categories) ? (
             post.categories.map((c, index) => (
               <span key={index} className="postCat">{c.name}</span>
@@ -64,10 +64,10 @@ export default function Post({ post }) {
           ) : (
             <span className="postCat">Uncategorized</span>
           )}
-        </div> */}
-        {/* <Link to={`/post/${post._id}`} className="link"> */}
-          {/* <span className="postTitle">{post.title}</span>
-        </Link> */}
+        </div>
+        <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr />
         <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
         <p className='postDesc'>{post.desc}</p>

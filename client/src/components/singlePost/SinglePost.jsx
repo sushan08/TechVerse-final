@@ -13,7 +13,7 @@ const SinglePost = () => {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
-  const PF = "http://localhost:8000/images/";
+  const PF = "https://api.techverse.revampgoal.co/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -21,7 +21,7 @@ const SinglePost = () => {
 
   const getComments = useCallback(async () => {
     try {
-      const res = await axios.get(`/comments/${path}/comments`);
+      const res = await axios.get(`https://api.techverse.revampgoal.co/api/comments/${path}/comments`);
       console.log("Comments:", res.data);
       setComments(res.data);
     } catch (err) {
@@ -32,7 +32,7 @@ const SinglePost = () => {
 
     const getPost = async () => {
       try {
-        const res = await axios.get(`/posts/${path}`);
+        const res = await axios.get(`https://api.techverse.revampgoal.co/api/posts/${path}`);
         setPost(res.data);
         setTitle(res.data.title);
         setDesc(res.data.desc);
@@ -46,7 +46,7 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/posts/${post._id}`, {
+      await axios.delete(`https://api.techverse.revampgoal.co/api/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -57,7 +57,7 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/api/posts/${post._id}`, {
+      await axios.put(`https://api.techverse.revampgoal.co/api/posts/${post._id}`, {
         username: user.username,
         title,
         desc,

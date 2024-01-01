@@ -10,7 +10,7 @@ const Comment = ({ postId }) => {
 
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`/comments/${postId}/comments`);
+      const res = await axios.get(`https://api.techverse.revampgoal.co/api/comments/${postId}/comments`);
       setComments(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ const Comment = ({ postId }) => {
 
   const handleComment = async () => {
     try {
-      await axios.post(`/comments/${postId}/comments`, {
+      await axios.post(`https://api.techverse.revampgoal.co/api/comments/${postId}/comments`, {
         username: user.username,
         text: comment,
       });
@@ -41,7 +41,7 @@ const Comment = ({ postId }) => {
 
   const handleDeleteComment = async (commentId) => {
     try {
-      await axios.delete(`/comments/${commentId}/delete`);
+      await axios.delete(`https://api.techverse.revampgoal.co/api/comments/${commentId}/delete`);
 
       // Update the comments state by filtering out the deleted comment
       setComments((prevComments) => prevComments.filter((c) => c._id !== commentId));
